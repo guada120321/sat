@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAT — Sistema Automático de Alarma para Talleres. Defensa de proyecto técnico de la EEST N° 5 de Berazategui.">
+  <title>SAT · Sistema Automático de Alarma para Talleres</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="SAT — inicio">
+        <span class="brand-mark">S</span>
+        <span class="brand-text">
+          <strong>SAT</strong>
+          <small>Sistema Automático de Alarma para Talleres</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button"
+                aria-label="Activar modo oscuro" aria-pressed="false" title="Cambiar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#sistema">Sistema</a>
+        <a href="#desarrollo">Desarrollo</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#galeria">Galería</a>
+        <a class="nav-cta" href="descargas/SAT_Presentacion_BlancoRojo.pptx" download>Descargar PPTX</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> EEST N° 5 · Berazategui</p>
+          <h1>SAT</h1>
+          <p class="hero-subtitle">Sistema Automático de Alarma<br>para Talleres</p>
+          <p class="hero-lead">
+            Alerta temprana e interrupción preventiva de potencia para los talleres escolares.
+            Una respuesta automática, instantánea y documentada ante cada emergencia.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyecto">Conocer el proyecto</a>
+            <a class="btn btn-outline" href="#galeria">Ver galería</a>
+          </div>
+          <p class="hero-meta">
+            Defensa de proyecto técnico · Electrónica y Sistemas Distribuidos<br>
+            Curso 7° 2° · Prof. responsable: Coronel Leonel · Noviembre de 2026
+          </p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-visual-frame">
+            <img src="assets/hero.jpg" alt="Prototipo del sistema SAT instalado en el taller escolar">
+          </div>
+          <div class="hero-badge">
+            <span>&lt; 1 s</span>
+            <small>tiempo de respuesta</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Indicadores del sistema">
+      <div class="container stats-grid">
+        <div class="stat"><strong data-count="1" data-prefix="&lt; " data-suffix=" s">&lt; 1 s</strong><span>Latencia de respuesta</span></div>
+        <div class="stat"><strong data-count="5" data-suffix=" s">5 s</strong><span>Corte automático de potencia</span></div>
+        <div class="stat"><strong data-count="3">3</strong><span>Estaciones de taller simuladas</span></div>
+        <div class="stat"><strong>Wi-Fi + Ethernet</strong><span>Red híbrida de comunicación</span></div>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTO ============ -->
+    <section class="section" id="proyecto">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> 01 · Contexto y problemática</p>
+          <h2>Una respuesta que hoy depende del azar</h2>
+          <p class="section-intro">
+            Los talleres escolares concentran maquinaria, herramientas de corte y tableros eléctricos.
+            Ante una emergencia, cada segundo cuenta.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="card reveal">
+            <span class="card-index">01</span>
+            <h3>Riesgo constante</h3>
+            <p>Equipos eléctricos y maquinaria pesada operando de forma simultánea.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-index">02</span>
+            <h3>Respuesta lenta</h3>
+            <p>La alerta verbal viaja por cadenas informales y demora minutos en llegar a preceptoría.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-index">03</span>
+            <h3>Sin registro</h3>
+            <p>Los incidentes no se documentan, lo que impide analizarlos y prevenirlos.</p>
+          </article>
+        </div>
+
+        <figure class="split-figure reveal">
+          <img src="assets/contexto.jpg" alt="Espacio de trabajo del taller escolar">
+          <figcaption>
+            <span class="figcaption-label">El contexto</span>
+            <p>
+              La dependencia de medios de comunicación informales genera demoras críticas que pueden
+              agravar cualquier situación de riesgo.
+            </p>
+            <div class="highlight">SAT reduce el tiempo de reacción a menos de 1 segundo y activa el corte automático de potencia.</div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ OBJETIVOS ============ -->
+    <section class="section section-tint" id="objetivos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> 02 · Objetivos, metas y alcance</p>
+          <h2>Objetivos del proyecto</h2>
+        </div>
+
+        <div class="objectives-grid">
+          <div class="objective-general reveal">
+            <p class="mini-label">Objetivo general</p>
+            <p>
+              Diseñar e implementar un sistema electrónico de alerta temprana e interrupción
+              preventiva de potencia para los talleres de la EEST N° 5, informando instantáneamente
+              en preceptoría mediante señales sonoras y una interfaz web en tiempo real.
+            </p>
+          </div>
+          <div class="objective-list reveal">
+            <h3>Objetivos específicos</h3>
+            <ul class="check-list">
+              <li>Desplegar estaciones emisoras Wi-Fi con ESP32 y señalización local de LED.</li>
+              <li>Configurar la central receptora con Arduino Uno y Ethernet Shield sobre red cableada.</li>
+              <li>Implementar la etapa de actuación de doble relé: sirena y corte de potencia de 5 segundos.</li>
+              <li>Crear una interfaz web responsiva en HTML/CSS accesible desde preceptoría.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="scope-grid">
+          <article class="card reveal">
+            <span class="card-index">A</span>
+            <p class="mini-label">Alcance actual · prototipo</p>
+            <h3>Prueba de concepto</h3>
+            <p>Un ESP32 centralizado simula las señales de emergencia y valida el funcionamiento de la red, los relés y la interfaz web.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-index">B</span>
+            <p class="mini-label">Proyecto institucional final</p>
+            <h3>Escalabilidad prevista</h3>
+            <p>Topología distribuida con un ESP32 independiente por taller, manteniendo una única central receptora en preceptoría.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SISTEMA ============ -->
+    <section class="section" id="sistema">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> 03 · Arquitectura y flujo</p>
+          <h2>Cómo funciona el sistema</h2>
+          <p class="section-intro">Cuatro etapas, una respuesta inmediata y sin intervención manual.</p>
+        </div>
+
+        <div class="architecture reveal" aria-label="Diagrama de arquitectura del sistema">
+          <div class="arch-stage">
+            <p class="arch-title">Nodos emisores · talleres</p>
+            <div class="arch-box"><strong>Taller 1</strong><small>ESP32 + pulsador + LED</small></div>
+            <div class="arch-box"><strong>Taller 2</strong><small>ESP32 + pulsador + LED</small></div>
+            <div class="arch-box"><strong>Taller 3</strong><small>ESP32 + pulsador + LED</small></div>
+          </div>
+          <div class="arch-arrow"><span>Wi-Fi</span><i>→</i></div>
+          <div class="arch-stage">
+            <p class="arch-title">Red local</p>
+            <div class="arch-box"><strong>Router Wi-Fi</strong><small>Recepción inalámbrica</small></div>
+            <div class="arch-box"><strong>Cable UTP</strong><small>Enlace a preceptoría</small></div>
+          </div>
+          <div class="arch-arrow"><span>UTP</span><i>→</i></div>
+          <div class="arch-stage">
+            <p class="arch-title">Central · preceptoría</p>
+            <div class="arch-box"><strong>Arduino Uno</strong><small>+ Ethernet Shield</small></div>
+            <div class="arch-box"><strong>Servidor web</strong><small>TCP/IP asíncrono</small></div>
+          </div>
+          <div class="arch-arrow"><span>TCP/IP</span><i>→</i></div>
+          <div class="arch-stage">
+            <p class="arch-title">Salidas y monitoreo</p>
+            <div class="arch-box"><strong>Relé 1</strong><small>Sirena sonora / luminosa</small></div>
+            <div class="arch-box"><strong>Relé 2</strong><small>Corte de potencia · 5 s</small></div>
+            <div class="arch-box"><strong>Interfaz web</strong><small>Estado en tiempo real</small></div>
+          </div>
+        </div>
+
+        <p class="note reveal">
+          El enlace cableado hasta preceptoría protege la comunicación frente al ruido electromagnético de los motores.
+        </p>
+
+        <div class="steps">
+          <article class="step reveal"><span>01</span><h3>Detección</h3><p>El pulsador hongo del taller es accionado por el operario.</p></article>
+          <article class="step reveal"><span>02</span><h3>Transmisión</h3><p>El ESP32 envía la trama por Wi-Fi al router y de allí, por Ethernet, al servidor.</p></article>
+          <article class="step reveal"><span>03</span><h3>Actuación</h3><p>Arduino valida el origen, activa la sirena y corta la máquina afectada durante 5 s.</p></article>
+          <article class="step reveal"><span>04</span><h3>Notificación</h3><p>La interfaz web pasa a rojo e indica el taller y el estado de energía.</p></article>
+        </div>
+
+        <div class="modes">
+          <article class="card reveal"><span class="card-index">1</span><h3>Monitoreo / Standby</h3><p>Las máquinas reciben energía a través del Relé 2 y la sirena de preceptoría permanece inactiva.</p></article>
+          <article class="card card-alert reveal"><span class="card-index">2</span><h3>Alerta de emergencia</h3><p>El ESP32 envía la orden; el Relé 1 dispara la sirena y el Relé 2 corta la energía del taller emisor durante 5 segundos.</p></article>
+          <article class="card reveal"><span class="card-index">3</span><h3>Restablecimiento / Reset</h3><p>Cumplido el temporizador, el Relé 2 realimenta la red y el sistema retorna a Standby.</p></article>
+        </div>
+
+        <div class="safety reveal">
+          <strong>Rutina de seguridad</strong>
+          <span>Inspección de cables y pulsadores · verificación de relés · limpieza de polvo y virutas · simulacros para certificar tiempos.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESARROLLO ============ -->
+    <section class="section section-tint" id="desarrollo">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> 04 · Desarrollo técnico e interfaz</p>
+          <h2>Hardware, red e interfaz</h2>
+        </div>
+
+        <div class="bom-wrap reveal">
+          <table class="bom-table">
+            <caption>Lista de materiales y funciones principales</caption>
+            <thead>
+              <tr><th>Componente</th><th>Función principal</th><th>Cantidad / tipo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ESP32 Dev Module</td><td>Emisor Wi-Fi y lectura de pulsadores</td><td>1 (prototipo)</td></tr>
+              <tr><td>Arduino Uno + Ethernet Shield</td><td>Servidor central en preceptoría</td><td>1</td></tr>
+              <tr><td>Módulo de relé 2 canales</td><td>Sirena y corte de potencia (5 s)</td><td>1</td></tr>
+              <tr><td>Router Wi-Fi + cable UTP</td><td>Infraestructura de red local</td><td>1 + UTP</td></tr>
+              <tr><td>Pulsadores hongo, LEDs, resistencias</td><td>Señalización y accionamiento local</td><td>3 / 3 / 6</td></tr>
+              <tr><td>Sirena / baliza luminosa</td><td>Alerta sonora y visual en preceptoría</td><td>1</td></tr>
+              <tr><td>Fuentes 12 V, 5 V y 3,3 V</td><td>Alimentación de lógica y etapa de potencia</td><td>—</td></tr>
+              <tr><td>Placa de circuito impreso (PCB)</td><td>Montaje ordenado y permanente</td><td>1</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="interface-grid">
+          <div class="interface-copy reveal">
+            <h3>Panel de monitoreo en tiempo real</h3>
+            <ul class="check-list">
+              <li><strong>Servidor asíncrono:</strong> el Arduino Uno aloja el servidor web en la red local; el canal Ethernet evita la saturación.</li>
+              <li><strong>Sin base de datos externa:</strong> el monitoreo se gestiona en tiempo real.</li>
+              <li><strong>Interfaz responsiva:</strong> HTML/CSS disponible en el navegador de preceptoría.</li>
+            </ul>
+            <p class="firmware-note">Firmware desarrollado en Arduino IDE (C++) con bibliotecas Wi-Fi, Ethernet y sockets asíncronos.</p>
+          </div>
+          <figure class="interface-figure reveal">
+            <img src="assets/panel.jpg" alt="Captura del panel web de preceptoría del sistema SAT">
+            <figcaption>Vista del panel de preceptoría · verde = operación normal, rojo = emergencia</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANIFICACIÓN Y EQUIPO ============ -->
+    <section class="section" id="equipo">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> 05 · Planificación y equipo</p>
+          <h2>Plan de trabajo y responsables</h2>
+        </div>
+
+        <div class="plan-grid">
+          <ol class="timeline reveal">
+            <li><strong>Relevamiento y componentes</strong><span>Problemática, selección de componentes y simulaciones circuitales.</span></li>
+            <li><strong>Maqueta y montaje</strong><span>Botones hongo, cajas ignífugas e indicadores LED.</span></li>
+            <li><strong>Programación</strong><span>Lógica TCP/IP y servidores de red en C++.</span></li>
+            <li><strong>Actuación e interfaz</strong><span>Relés para sirena y corte de 5 s, interfaz web y calibración.</span></li>
+            <li><strong>Pruebas y documentación</strong><span>Ensayos integrales y carpeta técnica.</span></li>
+          </ol>
+
+          <div class="team-grid">
+            <article class="team-card reveal">
+              <img src="assets/equipo-peralta.jpg" alt="Foto de Peralta Alondra">
+              <div><h3>Peralta Alondra</h3><p>Líder de proyecto y desarrollo de hardware: circuitos, lógica de control y diagrama de Gantt.</p></div>
+            </article>
+            <article class="team-card reveal">
+              <img src="assets/equipo-arrieta.jpg" alt="Foto de Arrieta Guadalupe">
+              <div><h3>Arrieta Guadalupe</h3><p>Analista de datos y documentación: diagramas E-R, casos de uso, modelo relacional, wireframes y DFD.</p></div>
+            </article>
+            <article class="team-card reveal">
+              <img src="assets/equipo-ruiz.jpg" alt="Foto de Ruiz Díaz Selena">
+              <div><h3>Ruiz Díaz Selena</h3><p>Diseño gráfico y frontend: interfaz de usuario y experiencia estética.</p></div>
+            </article>
+            <p class="team-note reveal">Trabajo colaborativo en todas las etapas; se detallan las responsabilidades principales por área.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVALUACIÓN Y RECURSOS ============ -->
+    <section class="section section-tint" id="evaluacion">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> 06 · Evaluación, recursos e impacto</p>
+          <h2>Resultados y proyección</h2>
+        </div>
+
+        <div class="eval-grid">
+          <article class="card reveal">
+            <span class="card-index">✓</span>
+            <h3>Criterios de evaluación</h3>
+            <ul class="check-list compact">
+              <li>Latencia de respuesta menor a 1 segundo.</li>
+              <li>Corte exacto de 5 s en el Relé 2.</li>
+              <li>Resiliencia ante fallas del router y desconexiones de cable.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <span class="card-index">♻</span>
+            <h3>Sustentabilidad e impacto</h3>
+            <ul class="check-list compact">
+              <li>Circuitos de bajo consumo (5 V / 3,3 V).</li>
+              <li>Reutilización de materiales en la maqueta.</li>
+              <li>Modernización de los estándares de seguridad escolar.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="budget-grid">
+          <div class="budget-copy reveal">
+            <h3>Recursos del proyecto</h3>
+            <p><strong>Materiales:</strong> microcontroladores, relés, router, cable UTP, componentes discretos, placas PCB, pulsadores y sirena.</p>
+            <p><strong>Humanos e inmateriales:</strong> horas de taller, capacitación en C++, HTML/CSS, electrónica de potencia, redes TCP/IP y orientación docente.</p>
+            <p class="small-note">Proyecto escolar autogestionado de prototipado técnico.</p>
+          </div>
+          <div class="budget-card reveal">
+            <p class="mini-label">Total estimado · componentes</p>
+            <strong>$108.200</strong>
+            <ul>
+              <li><span>ESP32</span><span>$15.000</span></li>
+              <li><span>Pulsadores ×3</span><span>$7.200</span></li>
+              <li><span>Transformador 12 V</span><span>$27.000</span></li>
+              <li><span>LEDs ×3</span><span>$1.500</span></li>
+              <li><span>Resistencias ×6</span><span>$1.500</span></li>
+              <li><span>Relé</span><span>$3.000</span></li>
+              <li><span>Placa PCB</span><span>$4.000</span></li>
+              <li><span>Sirena</span><span>$19.000</span></li>
+              <li><span>Arduino Uno</span><span>$15.000</span></li>
+              <li><span>Ethernet Shield</span><span>$15.000</span></li>
+            </ul>
+            <small>Cifras según el listado de componentes del prototipo.</small>
+          </div>
+        </div>
+
+        <div class="beneficiaries reveal">
+          <strong>Beneficiarios</strong>
+          <span><b>Directos:</b> estudiantes, docentes, pañoleros, preceptores y directivos de la EEST N° 5. <b>Indirectos:</b> toda la comunidad educativa.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Registro gráfico</p>
+          <h2>Galería del prototipo</h2>
+          <p class="section-intro">Imágenes de la documentación del proyecto SAT: maqueta, circuitos, ensayos y material de difusión.</p>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <figure class="gallery-item wide reveal"><img src="assets/collage.jpg" alt="Collage fotográfico del sistema SAT" data-caption="Collage general del proyecto SAT"></figure>
+          <figure class="gallery-item reveal"><img src="assets/hero.jpg" alt="Prototipo en el taller escolar" data-caption="Prototipo en el taller escolar"></figure>
+          <figure class="gallery-item reveal"><img src="assets/contexto.jpg" alt="Espacio de trabajo del taller" data-caption="Espacio de trabajo del taller"></figure>
+          <figure class="gallery-item reveal"><img src="assets/cierre.jpg" alt="Detalle del armado del prototipo" data-caption="Detalle del armado del prototipo"></figure>
+          <figure class="gallery-item reveal"><img src="assets/circuito.jpg" alt="Simulación del circuito" data-caption="Simulación del circuito"></figure>
+          <figure class="gallery-item reveal"><img src="assets/panel.jpg" alt="Interfaz web de preceptoría" data-caption="Interfaz web de preceptoría"></figure>
+          <figure class="gallery-item reveal"><img src="assets/manual.jpg" alt="Manual de uso del sistema" data-caption="Manual de uso del sistema"></figure>
+          <figure class="gallery-item reveal"><img src="assets/gantt.jpg" alt="Diagrama de Gantt del plan de trabajo" data-caption="Diagrama de Gantt del plan de trabajo"></figure>
+          <figure class="gallery-item reveal"><img src="assets/modelo-er.jpg" alt="Modelo entidad-relación" data-caption="Modelo entidad-relación"></figure>
+          <figure class="gallery-item reveal"><img src="assets/flyer.jpg" alt="Flyer de difusión del proyecto" data-caption="Flyer de difusión del proyecto"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIERRE ============ -->
+    <section class="closing" id="cierre">
+      <div class="container closing-grid">
+        <div class="closing-copy reveal">
+          <p class="mini-label">Conclusión</p>
+          <blockquote>«Un taller seguro no es el que no tiene accidentes, sino el que sabe cómo reaccionar ante ellos».</blockquote>
+          <p class="closing-sub">Alerta inmediata · corte preventivo · respuesta documentada.</p>
+          <h2>¿Preguntas?</h2>
+          <p class="closing-team">Arrieta, Guadalupe · Peralta, Alondra · Ruiz Díaz, Selena</p>
+          <a class="btn btn-light" href="descargas/SAT_Presentacion_BlancoRojo.pptx" download>Descargar la presentación</a>
+        </div>
+        <div class="closing-visual reveal">
+          <img src="assets/cierre.jpg" alt="Imagen del proyecto SAT">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>SAT</strong>
+        <p>Sistema Automático de Alarma para Talleres<br>Escuela de Educación Secundaria Técnica N° 5 · Berazategui</p>
+      </div>
+      <div class="footer-right">
+        <p>Curso 7° 2° · Profesor responsable: Coronel Leonel</p>
+        <p>Noviembre de 2026</p>
+        <a href="#top">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">×</button>
+    <figure>
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
